@@ -14,7 +14,7 @@ type Memory struct {
 
 // New Memory
 func NewMemory() Memory {
-	persons := make(map[int]model.Person)
+	persons := make(map[int]model.Person) //Inicialización del mapa
 	return Memory{
 		currentID: 0,
 		Persons:   persons,
@@ -64,7 +64,7 @@ func (m *Memory) GetByID(ID int) (model.Person, error) {
 	return person, nil
 }
 
-// GelAtt
+// GetAll
 func (m *Memory) GetAll() (model.Persons, error) {
 	var result model.Persons
 	for _, v := range m.Persons {
